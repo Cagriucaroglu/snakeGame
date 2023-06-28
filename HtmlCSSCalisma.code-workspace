@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../../../Documents/VsCode/HtmlCSSCalisma"
+		},
+		{
+			"path": "../proje1"
+		},
+		{
+			"path": "../dnm"
+		},
+		{
+			"path": "../../../eclipseEEworkSpace/my-app2"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "snakeGame"
+	}
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Object</h1>
+<h2>The setInterval() Method</h2>
+
+<p id="demo"></p>
+
+<script>
+const element = document.getElementById("demo");
+setInterval(function() {element.innerHTML += "Hello"}, 1000);
+</script>
+
+</body>
+</html>
+
+<!-- element.innerHTML bir HTML öğesinin içeriğini temsil eden bir özelliktir. Bu özellik, bir HTML öğesinin içine yerleştirilen metin veya HTML kodunu alır veya değiştirir.
+
+Örneğin, <p id="demo"></p> şeklinde bir HTML paragraf öğesi (p elementi) olduğunu düşünelim. JavaScript kodunda, const element = document.getElementById("demo"); satırıyla bu paragraf öğesine referans alınır ve element değişkenine atanır.
+
+Sonra, setInterval fonksiyonunda tanımlanan anonim işlevin içinde, element.innerHTML += "Hello" ifadesi kullanılır. Bu ifade, her çağrıldığında element öğesinin içeriğine "Hello" metnini ekler. += operatörü, önceki içeriği korurken yeni metni eklemek için kullanılır.
+
+Yani, element.innerHTML += "Hello" ifadesi, her tekrarda element öğesinin içine "Hello" metnini ekleyerek içeriği günceller. Bu sayede, web sayfasında "Hello" metni biriktirilerek görüntülenir. -->
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Element Object</h1>
+<h2>The addEventListener() Method</h2>
+
+<p>Execute a function when a user clicks on a button:</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo">
+
+<script>
+const element2 = document.getElementById("myBtn");
+element2.addEventListener("click", myFunction);  // Try it butonuna tıklandığında Try it'in altında Hello World yazıcak 
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World"; // burayı document.getElementById("demo").innerHTML += "Hello World"; yapsaydık tıkladıkça Hello World yazcaktı yan yana
+}
+</script>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>  <!-- Bu da addeventListenerın farklı eventları -->
+<html>
+<body>
+
+<h1>The Element Object</h1>
+<h2>The addEventListener() Method</h2>
+
+<p>This example uses the addEventListener() method to add many events on the same button.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+const element3 = document.getElementById("myBtn");
+element3.addEventListener("mouseover", myFunction);
+element3.addEventListener("click", mySecondFunction);
+element3.addEventListener("mouseout", myThirdFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML += "Moused over!<br>"
+}
+
+function mySecondFunction() {
+  document.getElementById("demo").innerHTML += "Clicked!<br>"
+}
+
+function myThirdFunction() {
+  document.getElementById("demo").innerHTML += "Moused out!<br>"
+}
+</script>
+
+</body>
+</html>
+
+
+<div>Score: <span id="score">0</span></div> <!-- span div içine div açmak gibi düşünülebilir-->
